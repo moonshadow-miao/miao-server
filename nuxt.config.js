@@ -14,14 +14,14 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/logo.ico' }
     ]
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#ccc' },
 
   /*
   ** Global CSS
@@ -69,5 +69,6 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  srcDir: 'client'
 }

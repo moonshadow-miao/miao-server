@@ -9,9 +9,9 @@
         server for dymiao.top
       </h2>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
+        <a 
+          href="https://nuxtjs.org/" 
+          target="_blank" 
           class="button--green">Documentation</a>
         <a
           href="https://github.com/nuxt/nuxt.js"

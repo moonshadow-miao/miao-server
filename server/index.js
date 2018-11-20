@@ -2,11 +2,13 @@
 const Koa = require('koa')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
+const Static = require('koa-static');
 
 const app = new Koa()
 const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
-
+//路径管理
+const path = require('path')
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js')
 config.dev = !(app.env === 'production')
@@ -21,7 +23,7 @@ async function start() {
     await builder.build()
   }
 
-  app.use(ctx => {
+  app.use(Static(path.join( __dirname, './../static'))).use(ctx => {
     ctx.status = 200 // koa defaults to 404 when it sees that status is unset
     return new Promise((resolve, reject) => {
       ctx.res.on('close', resolve)
