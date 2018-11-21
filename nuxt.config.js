@@ -17,17 +17,22 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/logo.ico' }
     ]
   },
+  cache: {
+    max: 100,
+    maxAge: 300000
+  },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#ccc' },
+  loading: { color: '#704499', height: '5px' },
 
   /*
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '@/assets/common.styl'
   ],
 
   /*
